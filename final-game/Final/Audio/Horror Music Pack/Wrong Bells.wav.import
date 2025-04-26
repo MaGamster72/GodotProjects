@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxfm4848dumyy"
+path="res://.godot/imported/Wrong Bells.wav-b76f09a3b4816ac5cf3f631abaad4df2.sample"
+
+[deps]
+
+source_file="res://Final/Audio/Horror Music Pack/Wrong Bells.wav"
+dest_files=["res://.godot/imported/Wrong Bells.wav-b76f09a3b4816ac5cf3f631abaad4df2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bvacgq6ivpv20"
+path="res://.godot/imported/6. Throne of the Fjords.ogg-95dee0e5b041a3d52485f6612d6c46df.oggvorbisstr"
+
+[deps]
+
+source_file="res://Final/Audio/Viking Folk Music Pack/ogg/6. Throne of the Fjords.ogg"
+dest_files=["res://.godot/imported/6. Throne of the Fjords.ogg-95dee0e5b041a3d52485f6612d6c46df.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

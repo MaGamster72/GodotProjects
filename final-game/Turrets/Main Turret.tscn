@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://de6gjtqel06e7"]
+
+[ext_resource type="Texture2D" uid="uid://dyrg07jkgps1u" path="res://Final/Art/2d Tower defence turrets.png" id="1_3koua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bi0e"]
+size = Vector2(32, 32)
+
+[node name="Main Turret" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3koua")
+hframes = 2
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3bi0e")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgw5o3fw8x6pv"]
+
+[ext_resource type="Script" path="res://Bullets/bullet_main.gd" id="1_w4w8y"]
+[ext_resource type="Texture2D" uid="uid://dl661n5jn5u1d" path="res://Final/Art/Sprites - Lasers Bullets #1 [66]v2.5/Laser Sprites/01.png" id="2_lg877"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npld8"]
+size = Vector2(32, 14)
+
+[node name="BulletMain" type="Area2D" groups=["bullets"]]
+script = ExtResource("1_w4w8y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lg877")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_npld8")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

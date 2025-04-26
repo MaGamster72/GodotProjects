@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://d20uqfk1t5tf3"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_mcxus"]
+[ext_resource type="FontFile" uid="uid://b2ugs2mayq65a" path="res://Thanksgiving.otf" id="2_ahess"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0q4cr"]
+line_spacing = 5.0
+font = ExtResource("2_ahess")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_ai2xj"]
+line_spacing = 5.0
+font = ExtResource("2_ahess")
+font_size = 70
+
+[node name="HUD" type="MarginContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 60.0
+offset_right = -86.0
+offset_bottom = 67.0
+grow_horizontal = 2
+script = ExtResource("1_mcxus")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Round" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Round"
+label_settings = SubResource("LabelSettings_0q4cr")
+
+[node name="Number" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "1"
+label_settings = SubResource("LabelSettings_ai2xj")

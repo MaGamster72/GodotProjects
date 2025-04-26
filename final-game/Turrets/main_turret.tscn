@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://qnso186yfq2h"]
+
+[ext_resource type="Texture2D" uid="uid://dyrg07jkgps1u" path="res://Final/Art/2d Tower defence turrets.png" id="1_2noa4"]
+[ext_resource type="Script" path="res://Turrets/main_turret.gd" id="1_wg37q"]
+[ext_resource type="AudioStream" uid="uid://b6k8t1dbw3uv0" path="res://Final/Audio/Lazer Pack 1/Lazer_010.wav" id="3_jxd1q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8r2g5"]
+size = Vector2(32, 32)
+
+[node name="MainTurret" type="Area2D"]
+script = ExtResource("1_wg37q")
+fire_rate = 0.5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_2noa4")
+hframes = 2
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8r2g5")
+
+[node name="Muzzle" type="Marker2D" parent="."]
+position = Vector2(22, 0)
+
+[node name="GunCooldown" type="Timer" parent="."]
+
+[node name="Lazer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jxd1q")
+
+[connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]

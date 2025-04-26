@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bf6xvbio10tl5"
+path="res://.godot/imported/Tense Orchestra.wav-e513a747745d1ed4fa73e1a493dc627d.sample"
+
+[deps]
+
+source_file="res://Final/Audio/Horror Music Pack/Tense Orchestra.wav"
+dest_files=["res://.godot/imported/Tense Orchestra.wav-e513a747745d1ed4fa73e1a493dc627d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

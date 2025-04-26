@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://c4rsiqie2avw2"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_6h2b5"]
+[ext_resource type="PackedScene" uid="uid://cwbsi8vq4wpyx" path="res://Enemies/Bat.tscn" id="2_3ne1y"]
+[ext_resource type="PackedScene" uid="uid://d20uqfk1t5tf3" path="res://hud.tscn" id="3_n4kyj"]
+[ext_resource type="PackedScene" uid="uid://gmmco7a3rpfy" path="res://levels/level1.tscn" id="3_pxfdy"]
+[ext_resource type="AudioStream" uid="uid://dxyly6red8m2c" path="res://Final/Audio/Horror Music Pack/Chase Theme 2.wav" id="5_amy6o"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_6h2b5")
+enemy_scene = ExtResource("2_3ne1y")
+level_scene = NodePath("LevelBase")
+spawn_rate = 1.0
+
+[node name="LevelBase" parent="." instance=ExtResource("3_pxfdy")]
+
+[node name="HUD" parent="." instance=ExtResource("3_n4kyj")]
+offset_left = 19.0
+offset_top = 8.0
+offset_right = 188.0
+offset_bottom = 75.0
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_amy6o")
+volume_db = -10.0

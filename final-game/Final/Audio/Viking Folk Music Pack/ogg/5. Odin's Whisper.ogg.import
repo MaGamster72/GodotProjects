@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://chxtj512k4i0v"
+path="res://.godot/imported/5. Odin's Whisper.ogg-2d4d81b62477c12c54bb6ee12d610856.oggvorbisstr"
+
+[deps]
+
+source_file="res://Final/Audio/Viking Folk Music Pack/ogg/5. Odin's Whisper.ogg"
+dest_files=["res://.godot/imported/5. Odin's Whisper.ogg-2d4d81b62477c12c54bb6ee12d610856.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bf55266yo0t5"
+path="res://.godot/imported/Lazer_019.wav-f603c6e767007bd2aeabc9205b048ef7.sample"
+
+[deps]
+
+source_file="res://Final/Audio/Lazer Pack 2/Lazer_019.wav"
+dest_files=["res://.godot/imported/Lazer_019.wav-f603c6e767007bd2aeabc9205b048ef7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

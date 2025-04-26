@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5sxblrk1ki2p"
+path="res://.godot/imported/2. Northern Lights .wav-2ef5a9062ba0cbb2707668c008c092be.sample"
+
+[deps]
+
+source_file="res://Final/Audio/Viking Folk Music Pack/Loops/wav/2. Northern Lights .wav"
+dest_files=["res://.godot/imported/2. Northern Lights .wav-2ef5a9062ba0cbb2707668c008c092be.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://djm45v1jp0kuo"
+path="res://.godot/imported/Creppy Piano.wav-c5329639c1f559ed9f10d2f99f62ea40.sample"
+
+[deps]
+
+source_file="res://Final/Audio/Horror Music Pack/Creppy Piano.wav"
+dest_files=["res://.godot/imported/Creppy Piano.wav-c5329639c1f559ed9f10d2f99f62ea40.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

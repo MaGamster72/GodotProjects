@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cqipegkgily2s"
+path="res://.godot/imported/3. Saga of the Sea Wolves.ogg-c31ce1c00e14a68c26ebc31361ccf6ea.oggvorbisstr"
+
+[deps]
+
+source_file="res://Final/Audio/Viking Folk Music Pack/ogg/3. Saga of the Sea Wolves.ogg"
+dest_files=["res://.godot/imported/3. Saga of the Sea Wolves.ogg-c31ce1c00e14a68c26ebc31361ccf6ea.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

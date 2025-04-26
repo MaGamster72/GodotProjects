@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnrp1xrln6ebe"
+path="res://.godot/imported/1. Echoes of Valhalla.wav-dc4217399fedc533660ddbade88d92ad.sample"
+
+[deps]
+
+source_file="res://Final/Audio/Viking Folk Music Pack/Wav/1. Echoes of Valhalla.wav"
+dest_files=["res://.godot/imported/1. Echoes of Valhalla.wav-dc4217399fedc533660ddbade88d92ad.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

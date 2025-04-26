@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dchxa32i7debl"
+path="res://.godot/imported/2. Northern Lights .mp3-5e8aa0ed203e8b400706f91d2fdb390a.mp3str"
+
+[deps]
+
+source_file="res://Final/Audio/Viking Folk Music Pack/Loops/mp3/2. Northern Lights .mp3"
+dest_files=["res://.godot/imported/2. Northern Lights .mp3-5e8aa0ed203e8b400706f91d2fdb390a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

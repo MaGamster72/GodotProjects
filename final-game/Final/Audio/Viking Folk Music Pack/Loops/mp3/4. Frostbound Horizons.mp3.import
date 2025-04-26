@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dl56ywm7dbngu"
+path="res://.godot/imported/4. Frostbound Horizons.mp3-83b6ed2ab6a37f6eb97be375b049f454.mp3str"
+
+[deps]
+
+source_file="res://Final/Audio/Viking Folk Music Pack/Loops/mp3/4. Frostbound Horizons.mp3"
+dest_files=["res://.godot/imported/4. Frostbound Horizons.mp3-83b6ed2ab6a37f6eb97be375b049f454.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

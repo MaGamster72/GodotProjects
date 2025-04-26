@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://csyoel12t4wtt"
+path="res://.godot/imported/Mystic.wav-e4e8b9158c38b2451446f0a37b888524.sample"
+
+[deps]
+
+source_file="res://Final/Audio/Horror Music Pack/Mystic.wav"
+dest_files=["res://.godot/imported/Mystic.wav-e4e8b9158c38b2451446f0a37b888524.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

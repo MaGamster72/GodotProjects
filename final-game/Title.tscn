@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://bul7fdiqu23gj"]
+
+[ext_resource type="Script" path="res://control.gd" id="1_g05ld"]
+[ext_resource type="FontFile" uid="uid://b2ugs2mayq65a" path="res://Thanksgiving.otf" id="2_ggsih"]
+[ext_resource type="AudioStream" uid="uid://brmsg8dhrp0hi" path="res://Final/Audio/Viking Folk Music Pack/Loops/mp3/1. Echoes of Valhalla.mp3" id="3_awe54"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7yiv5"]
+font = ExtResource("2_ggsih")
+font_size = 200
+
+[sub_resource type="LabelSettings" id="LabelSettings_525xy"]
+font = ExtResource("2_ggsih")
+font_size = 70
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g05ld")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 5
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Turret Defence"
+label_settings = SubResource("LabelSettings_7yiv5")
+
+[node name="Start" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -238.0
+offset_top = -67.0
+offset_right = 238.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Press Space to play"
+label_settings = SubResource("LabelSettings_525xy")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_awe54")

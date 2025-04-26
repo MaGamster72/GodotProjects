@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://doqy2wleixlu3"
+path="res://.godot/imported/3. Saga of the Sea Wolves.wav-d75f02d8a48dafb3c619ca322c5c6e39.sample"
+
+[deps]
+
+source_file="res://Final/Audio/Viking Folk Music Pack/Loops/wav/3. Saga of the Sea Wolves.wav"
+dest_files=["res://.godot/imported/3. Saga of the Sea Wolves.wav-d75f02d8a48dafb3c619ca322c5c6e39.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

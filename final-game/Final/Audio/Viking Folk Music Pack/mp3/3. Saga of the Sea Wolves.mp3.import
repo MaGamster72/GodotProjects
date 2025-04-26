@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://be8qt3fndbmhq"
+path="res://.godot/imported/3. Saga of the Sea Wolves.mp3-74633ab7b72cb203ce70356cfabad80a.mp3str"
+
+[deps]
+
+source_file="res://Final/Audio/Viking Folk Music Pack/mp3/3. Saga of the Sea Wolves.mp3"
+dest_files=["res://.godot/imported/3. Saga of the Sea Wolves.mp3-74633ab7b72cb203ce70356cfabad80a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
