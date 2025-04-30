@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://d186dfikigpfe"]
+
+[ext_resource type="Texture2D" uid="uid://kkaajcyikcuj" path="res://icon.svg" id="1_61yew"]
+
+[node name="PUpgrade" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_top = 235.0
+offset_right = 1152.0
+offset_bottom = 363.0
+
+[node name="BobButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_61yew")
+
+[node name="NeighborhoodButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_61yew")
+
+[node name="PoliceButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_61yew")
+
+[node name="GangsButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_61yew")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_top = 466.0
+offset_right = 1152.0
+offset_bottom = 594.0
+alignment = 1
+
+[node name="CartelButton" type="TextureButton" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_61yew")
+
+[node name="GovernmentButton" type="TextureButton" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_61yew")
+
+[node name="TerroristsButton" type="TextureButton" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_61yew")
+
+[node name="AlienButton" type="TextureButton" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_61yew")
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_61yew")
