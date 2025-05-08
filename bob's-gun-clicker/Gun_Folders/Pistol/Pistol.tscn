@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://dcr304nq4u8d8"]
+[gd_scene load_steps=4 format=3 uid="uid://dcr304nq4u8d8"]
 
 [ext_resource type="Texture2D" uid="uid://kkaajcyikcuj" path="res://icon.svg" id="1_1e1q2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cej0f"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_oth14"]
+font_size = 30
 
 [node name="Pistol" type="Control"]
 layout_mode = 3
@@ -37,11 +43,13 @@ grow_horizontal = 2
 [node name="CasingsLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 text = "Casings: 0"
+label_settings = SubResource("LabelSettings_cej0f")
 
 [node name="BulletsLabel" type="Label" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Bullets: 0"
+label_settings = SubResource("LabelSettings_oth14")
 horizontal_alignment = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
