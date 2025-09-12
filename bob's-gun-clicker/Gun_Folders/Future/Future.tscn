@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c62v32u51a4of"]
+[gd_scene load_steps=5 format=3 uid="uid://dcr304nq4u8d8"]
 
-[ext_resource type="Texture2D" uid="uid://kkaajcyikcuj" path="res://icon.svg" id="1_wjhmv"]
+[ext_resource type="Texture2D" uid="uid://kkaajcyikcuj" path="res://icon.svg" id="1_1e1q2"]
+[ext_resource type="Script" uid="uid://bfr2388qewhdi" path="res://Gun_Folders/Pistol/pistol.gd" id="1_oth14"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cej0f"]
 font_size = 30
@@ -8,13 +9,18 @@ font_size = 30
 [sub_resource type="LabelSettings" id="LabelSettings_oth14"]
 font_size = 30
 
-[node name="Future" type="Control"]
+[node name="Pistol" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_oth14")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 325.5)
+scale = Vector2(1.87745, 1.60539)
 
 [node name="GunButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -31,13 +37,13 @@ grow_horizontal = 2
 grow_vertical = 2
 action_mode = 0
 button_mask = 7
-texture_normal = ExtResource("1_wjhmv")
+texture_normal = ExtResource("1_1e1q2")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 23.0
+offset_bottom = 42.0
 grow_horizontal = 2
 
 [node name="CasingsLabel" type="Label" parent="HBoxContainer"]
@@ -60,26 +66,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/separation = 213
 
 [node name="UpgradeButton" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wjhmv")
+texture_normal = ExtResource("1_1e1q2")
 
 [node name="ResearchButton" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wjhmv")
+texture_normal = ExtResource("1_1e1q2")
 
 [node name="CraftingButton" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wjhmv")
+texture_normal = ExtResource("1_1e1q2")
 
 [node name="AdvanceButton" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture_normal = ExtResource("1_wjhmv")
+texture_normal = ExtResource("1_1e1q2")
 
 [node name="PrestigeButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -93,7 +100,7 @@ offset_top = -64.0
 offset_bottom = 64.0
 grow_horizontal = 0
 grow_vertical = 2
-texture_normal = ExtResource("1_wjhmv")
+texture_normal = ExtResource("1_1e1q2")
 
 [node name="SettingButton" type="TextureButton" parent="."]
 layout_mode = 1
@@ -104,4 +111,10 @@ offset_top = -64.0
 offset_right = 128.0
 offset_bottom = 64.0
 grow_vertical = 2
-texture_normal = ExtResource("1_wjhmv")
+texture_normal = ExtResource("1_1e1q2")
+
+[connection signal="pressed" from="GunButton" to="." method="_on_gun_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/ResearchButton" to="." method="_on_research_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/CraftingButton" to="." method="_on_crafting_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/AdvanceButton" to="." method="_on_advance_button_pressed"]

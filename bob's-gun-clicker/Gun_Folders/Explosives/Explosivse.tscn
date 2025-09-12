@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://duquu8sfjrmak"]
+[gd_scene load_steps=5 format=3 uid="uid://bpl1m3nx0cur"]
 
 [ext_resource type="Texture2D" uid="uid://kkaajcyikcuj" path="res://icon.svg" id="1_1e1q2"]
-[ext_resource type="Script" uid="uid://bymliqfyo6nyo" path="res://Gun_Folders/Rifle/rifle.gd" id="1_78fcg"]
+[ext_resource type="Script" uid="uid://bfr2388qewhdi" path="res://Gun_Folders/Pistol/pistol.gd" id="1_oth14"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cej0f"]
 font_size = 30
@@ -9,14 +9,14 @@ font_size = 30
 [sub_resource type="LabelSettings" id="LabelSettings_oth14"]
 font_size = 30
 
-[node name="Rifle" type="Control"]
+[node name="Pistol" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_78fcg")
+script = ExtResource("1_oth14")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(576.5, 325.5)
@@ -113,6 +113,7 @@ offset_bottom = 64.0
 grow_vertical = 2
 texture_normal = ExtResource("1_1e1q2")
 
+[connection signal="pressed" from="GunButton" to="." method="_on_gun_button_pressed"]
 [connection signal="pressed" from="HBoxContainer2/UpgradeButton" to="." method="_on_upgrade_button_pressed"]
 [connection signal="pressed" from="HBoxContainer2/ResearchButton" to="." method="_on_research_button_pressed"]
 [connection signal="pressed" from="HBoxContainer2/CraftingButton" to="." method="_on_crafting_button_pressed"]

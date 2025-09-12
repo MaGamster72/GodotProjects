@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1c8t3mbeqreb"]
+
+[ext_resource type="Texture2D" uid="uid://kkaajcyikcuj" path="res://icon.svg" id="1_61n7t"]
+[ext_resource type="Script" uid="uid://dhqqoeyd4q45b" path="res://Extra Scenes/crafting.gd" id="1_qyopf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qyopf"]
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_5hf17"]
+font_size = 30
+
+[node name="Crafting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qyopf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="CasingsLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Casings: 0"
+label_settings = SubResource("LabelSettings_qyopf")
+horizontal_alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("1_61n7t")
+
+[node name="BulletsLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Bullets: 0"
+label_settings = SubResource("LabelSettings_5hf17")
+horizontal_alignment = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00260417
+anchor_top = 0.319444
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(-2, 41)
+follow_focus = true
+draw_focus_border = true
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 105
+alignment = 1
+
+[connection signal="pressed" from="HBoxContainer/BackButton" to="." method="_on_back_pressed"]
