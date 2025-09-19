@@ -155,6 +155,7 @@ keep_pressed_outside = true
 texture_normal = ExtResource("1_psucq")
 
 [node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 2.0
 offset_right = 131.0

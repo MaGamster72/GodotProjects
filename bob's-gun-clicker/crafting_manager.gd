@@ -27,7 +27,7 @@ var presses: Array = []
 func _ready():
 	if presses.is_empty():
 		# Start with only Tier 1 press
-		presses.append(Press.new(1, 1, 3.0, 1))
+		presses.append(Press.new(1, 1, 0.1, 1))
 	set_process(true)
 
 # ---------------------

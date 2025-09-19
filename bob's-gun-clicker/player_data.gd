@@ -1,10 +1,19 @@
+# res://player_data.gd
 extends Node
 
 # -----------------------
 # Player currencies
 # -----------------------
 var casings: float = 0.0
-var bullets: int = 0
+var bullets: int = 1000
+var bobs: int = 0
+var neighborhoods: int = 0
+var police: int = 0
+var gangs: int = 0
+var cartel: int = 0
+var government: int = 0
+var terrorists: int = 0
+var aliens: int = 0
 var current_gun: String = "Pistol"
 var current_gun_scene: String = ""
 
@@ -121,6 +130,52 @@ func process_production(delta):
 				var cps = base_cps[p] * gun_mult
 				casings += cps * count * delta
 
+# -----------------------
+# Utility: CPS calculations
+# -----------------------
+func get_total_cps(for_gun: String = "") -> float:
+	# Return total CPS for the given gun (or current_gun if empty).
+	var gun = for_gun if for_gun != "" else current_gun
+	var total: float = 0.0
+	
+	var gun_mult = gun_cps_multiplier.get(gun, 1.0)
+	for p in producers:
+		var count = 0
+		if producers_owned.has(gun):
+			count = producers_owned[gun].get(p, 0)
+ 		# Include global variables if other scripts modify PlayerData.* directly
+			if p == "Bob":
+				count += bobs
+			if p == "Neighborhood":
+				count += neighborhoods
+			if p == "Police":
+				count += police
+			if p == "Gang":
+				count += gangs
+			if p == "Cartel":
+				count += cartel
+			if p == "Government":
+				count += government
+			if p == "Terrorists":
+				count += terrorists
+			if p == "Aliens":
+				count += aliens
+			if count > 0:
+				total += base_cps.get(p, 0) * gun_mult * count
+	
+	return total
+
+func get_casings_per_second(for_gun: String = "") -> float:
+	# Casings generated per second based on total CPS. Bobs/upgrades affect casings directly.
+	return get_total_cps(for_gun)
+func _process(delta):
+	casings += get_casings_per_second() * delta
+	process_production(delta)
+
+func on_crafting_completed(amount: int):
+	# Called by crafting scene when crafting finishes; amount should be an integer
+	bullets += amount
+	# Update/save/UI-related logic can be triggered by caller if needed
 # -----------------------
 # Advance to a new gun
 # -----------------------

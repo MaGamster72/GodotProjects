@@ -1,0 +1,46 @@
+## INSTALLATION
+
+### Step 1: Preparation
+
+1) Back up your project - We strongly recommend using version control (e.g. Git)
+
+2) Download and extract the plugin zip file into your project's /addons directory. This is what the folder structure should look like:
+
+📁 your-project
+  └─ 📁 addons
+      └─ 📁 gamedev_assistant --> plugin.gd should be found here
+
+You can delete the zip file and this text file after extraction.
+
+3) In Godot, go to Project → Project Settings → Plugins tab
+
+4) Enable the "GameDev Assistant" plugin
+
+5) Restart the editor: Project → Reload Current Project
+
+6) Locate the new Assistant tab in the editor (found in the same panel area as Inspector and Node - you may need to click the panel arrows "< >" to reveal it)
+
+7) Enter your API key
+
+8) Click the + button to start your first chat
+
+
+## UPGRADING THE PLUGIN TO NEW VERSIONS
+
+1) Close Godot Editor completely
+
+2) Back up your project if you haven't already
+
+3) Delete the folder /addons/gamedev_assistant
+
+4) Download and extract the new plugin version to your project's /addons directory
+
+Correct folder structure:
+
+📁 your-project
+  └─ 📁 addons
+      └─ 📁 gamedev_assistant --> plugin.gd should be found here
+
+5) Open Godot Editor
+
+The plugin will automatically be enabled as your previous settings are preserved

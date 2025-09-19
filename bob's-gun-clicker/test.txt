@@ -1,0 +1,24 @@
+# Edit file: res://player_data.gd
+extends Node
+
+var bullets = 0
+var casings = 0.0
+var bobs = 0
+var neighborhoods = 0
+var police = 0
+var gangs = 0
+var cartel = 0
+var government = 0
+var terrorists = 0
+var aliens = 0
+var base_cps = 1.0
+
+func get_total_cps():
+	return base_cps + (bobs * 0.5)
+
+func get_casings_per_second():
+	return get_total_cps()
+
+func _process(delta):
+	# Generate casings continuously regardless of current scene
+	casings += get_casings_per_second() * delta

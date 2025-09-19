@@ -1,4 +1,7 @@
+# res://Gun_Folders/Pistol/pistol.gd
 extends Control
+@onready var casings_label = $HBoxContainer/CasingsLabel
+@onready var bullets_label = $HBoxContainer/BulletsLabel
 
 # ---------------------
 # Gun button pressed
@@ -9,15 +12,16 @@ func _on_gun_button_pressed():
 
 func _ready():
 	PlayerData.current_gun_scene = "res://Gun_Folders/Pistol/Pistol.tscn"  # change per gun
-
+	add_to_group("cps_displays")
+	update_ui()
 
 func update_ui():
-	$HBoxContainer/CasingsLabel.text = "Casings: " + str(PlayerData.casings)
-	$HBoxContainer/BulletsLabel.text = "Bullets: " + str(PlayerData.bullets)
-	
+	casings_label.text = "Casings: %d" % int(PlayerData.casings)
+	bullets_label.text = "Bullets: %d" % int(PlayerData.bullets)
+func update_cps():
+	update_ui()
 
 func _process(delta):
-	# Continuously update the UI in case crafting changes values
 	update_ui()
 
 

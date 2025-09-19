@@ -110,4 +110,11 @@ text = "Bullets: 0"
 label_settings = SubResource("LabelSettings_ko8du")
 
 [connection signal="pressed" from="HBoxContainer/BobButton" to="." method="_on_bob_button_pressed"]
-[connection signal="pressed" from="HBoxContainer3/BackButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="HBoxContainer/NeighborhoodButton" to="." method="_on_neighborhood_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/PoliceButton" to="." method="_on_police_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/GangsButton" to="." method="_on_gangs_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/CartelButton" to="." method="_on_cartel_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/GovernmentButton" to="." method="_on_government_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/TerroristsButton" to="." method="_on_terrorists_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/AlienButton" to="." method="_on_alien_button_pressed"]
+[connection signal="pressed" from="HBoxContainer3/BackButton" to="." method="_on_back_button_pressed"]

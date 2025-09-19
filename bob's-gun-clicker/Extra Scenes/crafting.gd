@@ -1,4 +1,7 @@
+# res://Extra Scenes/crafting.gd
 extends Control
+@onready var casings_label = $HBoxContainer/CasingsLabel
+@onready var bullets_label = $HBoxContainer/BulletsLabel
 
 var press_nodes: Array = []
 
@@ -10,25 +13,26 @@ var tier_textures := [
 ]
 
 func _ready():
+	add_to_group("cps_displays")
 	# Start with one press (tier 1 unlocked by default)
 	var first_press = create_press(1)
 	$ScrollContainer/VBoxContainer.add_child(first_press)
 	press_nodes.append(first_press)
 
 	update_ui()
-
 func _process(delta):
-	PlayerData.process_production(delta)
 	for i in range(press_nodes.size()):
 		if i >= CraftingManager.presses.size():
 			continue
-
+		
 		var data = CraftingManager.presses[i]
 		var bar = press_nodes[i].get_node("ProgressBar")
 		bar.value = data.progress * 100
-
+	
+	# Generate casings continuously based on PlayerData CPS (bobs/upgrades affect casings)
+	PlayerData.casings += PlayerData.get_casings_per_second() * delta
+	
 	update_ui()
-
 # ---------------------
 # Build a press row with a TextureButton + ProgressBar
 # ---------------------
@@ -70,8 +74,12 @@ func unlock_press(tier: int):
 	press_nodes.append(new_press)
 
 func update_ui():
-	$HBoxContainer/CasingsLabel.text = "Casings: " + str(PlayerData.casings)
-	$HBoxContainer/BulletsLabel.text = "Bullets: " + str(PlayerData.bullets)
+	casings_label.text = "Casings: %d" % int(PlayerData.casings)
+	bullets_label.text = "Bullets: %d" % int(PlayerData.bullets)
+# Call this when crafting completes to add bullets (bullets are whole numbers)
+func on_crafting_completed(amount):
+	PlayerData.bullets += int(amount)
+	update_ui()
 
 func _on_back_pressed():
 	if PlayerData.current_gun_scene != "":
