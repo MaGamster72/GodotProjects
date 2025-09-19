@@ -18,6 +18,7 @@ func _ready():
 	update_ui()
 
 func _process(delta):
+	PlayerData.process_production(delta)
 	for i in range(press_nodes.size()):
 		if i >= CraftingManager.presses.size():
 			continue

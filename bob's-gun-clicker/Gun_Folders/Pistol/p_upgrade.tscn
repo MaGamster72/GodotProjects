@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://d186dfikigpfe"]
+[gd_scene load_steps=4 format=3 uid="uid://d186dfikigpfe"]
 
 [ext_resource type="Texture2D" uid="uid://kkaajcyikcuj" path="res://icon.svg" id="1_61yew"]
+[ext_resource type="Script" uid="uid://b0c2tud5j7ek2" path="res://Gun_Folders/Pistol/p_upgrade.gd" id="1_ko8du"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ko8du"]
+font_size = 30
 
 [node name="PUpgrade" type="Control"]
 layout_mode = 3
@@ -9,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ko8du")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -21,20 +26,32 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("1_61yew")
 
+[node name="BobLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
 [node name="NeighborhoodButton" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("1_61yew")
+
+[node name="NeighborhoodLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
 
 [node name="PoliceButton" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("1_61yew")
 
+[node name="PoliceLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
 [node name="GangsButton" type="TextureButton" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("1_61yew")
+
+[node name="GangsLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 layout_mode = 2
@@ -48,23 +65,49 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("1_61yew")
 
+[node name="CartelLabel" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+
 [node name="GovernmentButton" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("1_61yew")
+
+[node name="GovernmentLabel" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
 
 [node name="TerroristsButton" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("1_61yew")
 
+[node name="TerroristsLabel" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+
 [node name="AlienButton" type="TextureButton" parent="HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("1_61yew")
 
-[node name="BackButton" type="TextureButton" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="AlienLabel" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+
+[node name="BackButton" type="TextureButton" parent="HBoxContainer3"]
+layout_mode = 2
 texture_normal = ExtResource("1_61yew")
+
+[node name="BulletsLabel" type="Label" parent="HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Bullets: 0"
+label_settings = SubResource("LabelSettings_ko8du")
+
+[connection signal="pressed" from="HBoxContainer/BobButton" to="." method="_on_bob_button_pressed"]
+[connection signal="pressed" from="HBoxContainer3/BackButton" to="." method="_on_back_pressed"]

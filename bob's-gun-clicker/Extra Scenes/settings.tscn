@@ -1,4 +1,6 @@
-[gd_scene load_steps=0 format=3 uid="uid://bf44fvvdnj0h5"]
+[gd_scene load_steps=2 format=3 uid="uid://bf44fvvdnj0h5"]
+
+[ext_resource type="Texture2D" uid="uid://kkaajcyikcuj" path="res://icon.svg" id="1_0l4ce"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -7,3 +9,27 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MuteButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_0l4ce")
+
+[node name="MainMenuButton" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+texture_normal = ExtResource("1_0l4ce")
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 1
+offset_right = 128.0
+offset_bottom = 128.0
+texture_normal = ExtResource("1_0l4ce")
